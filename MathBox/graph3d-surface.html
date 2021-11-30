@@ -25,12 +25,12 @@
 
 	var graphData, view;
 	
-	var xFunctionText = "cos(u)*(a + b*cos(v))";
-	var yFunctionText = "sin(u)*(a + b*cos(v))";
-	var zFunctionText = "b*sin(v)";
+	var xFunctionText = "(2+a*(sin(3*u))^2*(cos(5*v))^2)*cos(u)*sin(v)";
+	var yFunctionText = "(2+a*(sin(3*u))^2*(cos(5*v))^2)*sin(u)*sin(v)";
+	var zFunctionText = "(2+a*(sin(3*u))^2*(cos(5*v))^2)*cos(v)";
 	
 	var a = 1, b = 0.5;
-	var	xMin = -3, xMax = 3, yMin = -2,	yMax = 2, zMin = -3, zMax = 3;
+	var	xMin = -6, xMax = 6, yMin = -4,	yMax = 4, zMin = -6, zMax = 6;
 	var uMin = 0, uMax = 6.282, vMin = 0, vMax = 6.282;
 	
 	// start of updateGraph function ==============================================================
@@ -147,7 +147,7 @@
       }
 	);
 	
-	var resolution = 32;
+	var resolution = 100;
 	var graphData = domain.area({
 		width: resolution, height: resolution,
         // expr: set later
